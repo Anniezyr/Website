@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "D:\\Software\\Website\\Website\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Software\\Website\\Website\\assets\\css\\templatemo-style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\css\\templatemo-style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Software\\Website\\Website\\vendor\\bootstrap\\css\\bootstrap.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:vendor\\bootstrap\\css\\bootstrap.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Software\\Website\\Website\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -13,6 +13,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Software\\Website\\Website\\vendor\\bootstrap\\css\\bootstrap.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:vendor\\bootstrap\\css\\bootstrap.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Software\\Website\\Website\\assets\\css\\templatemo-style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\css\\templatemo-style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Software\\Website\\Website\\assets\\css\\owl.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -39,19 +43,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "bootstrap.min.css",
+              "DocumentMoniker": "D:\\Software\\Website\\Website\\vendor\\bootstrap\\css\\bootstrap.min.css",
+              "RelativeDocumentMoniker": "vendor\\bootstrap\\css\\bootstrap.min.css",
+              "ToolTip": "D:\\Software\\Website\\Website\\vendor\\bootstrap\\css\\bootstrap.min.css",
+              "RelativeToolTip": "vendor\\bootstrap\\css\\bootstrap.min.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-01-17T22:34:35.123Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "templatemo-style.css",
               "DocumentMoniker": "D:\\Software\\Website\\Website\\assets\\css\\templatemo-style.css",
               "RelativeDocumentMoniker": "assets\\css\\templatemo-style.css",
               "ToolTip": "D:\\Software\\Website\\Website\\assets\\css\\templatemo-style.css",
               "RelativeToolTip": "assets\\css\\templatemo-style.css",
-              "ViewState": "AgIAACgBAAAAAAAAAAAAALAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACEBAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-01-17T22:09:52.685Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "owl.css",
               "DocumentMoniker": "D:\\Software\\Website\\Website\\assets\\css\\owl.css",
               "RelativeDocumentMoniker": "assets\\css\\owl.css",
@@ -63,7 +80,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "lightbox.css",
               "DocumentMoniker": "D:\\Software\\Website\\Website\\assets\\css\\lightbox.css",
               "RelativeDocumentMoniker": "assets\\css\\lightbox.css",
@@ -75,7 +92,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "flex-slider.css",
               "DocumentMoniker": "D:\\Software\\Website\\Website\\assets\\css\\flex-slider.css",
               "RelativeDocumentMoniker": "assets\\css\\flex-slider.css",
@@ -93,7 +110,7 @@
               "RelativeDocumentMoniker": "vendor\\bootstrap\\css\\bootstrap.css",
               "ToolTip": "D:\\Software\\Website\\Website\\vendor\\bootstrap\\css\\bootstrap.css",
               "RelativeToolTip": "vendor\\bootstrap\\css\\bootstrap.css",
-              "ViewState": "AgIAAMEAAAAAAAAAAAAiwMsAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAAADsAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-01-17T17:31:33.418Z",
               "EditorCaption": ""
@@ -106,7 +123,7 @@
               "RelativeDocumentMoniker": "index.html",
               "ToolTip": "D:\\Software\\Website\\Website\\index.html",
               "RelativeToolTip": "index.html",
-              "ViewState": "AgIAACkAAAAAAAAAAAAAADgAAABYAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABUAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-01-17T16:21:25.11Z",
               "EditorCaption": ""

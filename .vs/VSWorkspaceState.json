@@ -3,8 +3,10 @@
     "",
     "\\assets",
     "\\assets\\css",
-    "\\vendor"
+    "\\vendor",
+    "\\vendor\\bootstrap",
+    "\\vendor\\bootstrap\\css"
   ],
-  "SelectedNode": "\\assets\\css\\templatemo-style.css",
+  "SelectedNode": "\\vendor\\bootstrap\\css\\bootstrap.min.css",
   "PreviewInSolutionExplorer": false
 }

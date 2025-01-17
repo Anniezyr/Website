@@ -2,11 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\assets",
-    "\\assets\\css",
-    "\\assets\\fonts",
-    "\\assets\\images",
-    "\\assets\\js"
+    "\\vendor",
+    "\\vendor\\bootstrap",
+    "\\vendor\\bootstrap\\css"
   ],
-  "SelectedNode": "\\index.html",
+  "SelectedNode": "\\vendor\\bootstrap\\css\\bootstrap.css",
   "PreviewInSolutionExplorer": false
 }

@@ -7,6 +7,22 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:vendor\\bootstrap\\css\\bootstrap.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Software\\Website\\Website\\assets\\css\\templatemo-style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\css\\templatemo-style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Software\\Website\\Website\\assets\\css\\owl.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\css\\owl.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Software\\Website\\Website\\assets\\css\\lightbox.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\css\\lightbox.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Software\\Website\\Website\\assets\\css\\flex-slider.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\css\\flex-slider.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Software\\Website\\Website\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
@@ -18,8 +34,60 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "templatemo-style.css",
+              "DocumentMoniker": "D:\\Software\\Website\\Website\\assets\\css\\templatemo-style.css",
+              "RelativeDocumentMoniker": "assets\\css\\templatemo-style.css",
+              "ToolTip": "D:\\Software\\Website\\Website\\assets\\css\\templatemo-style.css",
+              "RelativeToolTip": "assets\\css\\templatemo-style.css",
+              "ViewState": "AgIAAKIBAAAAAAAAAAAAACQBAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-01-17T22:09:52.685Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "owl.css",
+              "DocumentMoniker": "D:\\Software\\Website\\Website\\assets\\css\\owl.css",
+              "RelativeDocumentMoniker": "assets\\css\\owl.css",
+              "ToolTip": "D:\\Software\\Website\\Website\\assets\\css\\owl.css",
+              "RelativeToolTip": "assets\\css\\owl.css",
+              "ViewState": "AgIAAKgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-01-17T22:09:47.774Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "lightbox.css",
+              "DocumentMoniker": "D:\\Software\\Website\\Website\\assets\\css\\lightbox.css",
+              "RelativeDocumentMoniker": "assets\\css\\lightbox.css",
+              "ToolTip": "D:\\Software\\Website\\Website\\assets\\css\\lightbox.css",
+              "RelativeToolTip": "assets\\css\\lightbox.css",
+              "ViewState": "AgIAALEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-01-17T22:09:33.714Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "flex-slider.css",
+              "DocumentMoniker": "D:\\Software\\Website\\Website\\assets\\css\\flex-slider.css",
+              "RelativeDocumentMoniker": "assets\\css\\flex-slider.css",
+              "ToolTip": "D:\\Software\\Website\\Website\\assets\\css\\flex-slider.css",
+              "RelativeToolTip": "assets\\css\\flex-slider.css",
+              "ViewState": "AgIAAAQBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-01-17T22:09:17.592Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -28,20 +96,20 @@
               "RelativeDocumentMoniker": "vendor\\bootstrap\\css\\bootstrap.css",
               "ToolTip": "D:\\Software\\Website\\Website\\vendor\\bootstrap\\css\\bootstrap.css",
               "RelativeToolTip": "vendor\\bootstrap\\css\\bootstrap.css",
-              "ViewState": "AgIAADAcAAAAAAAAAAAiwJofAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAMEAAAAAAAAAAAAiwMsAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-01-17T17:31:33.418Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "index.html",
               "DocumentMoniker": "D:\\Software\\Website\\Website\\index.html",
               "RelativeDocumentMoniker": "index.html",
               "ToolTip": "D:\\Software\\Website\\Website\\index.html",
               "RelativeToolTip": "index.html",
-              "ViewState": "AgIAAHoAAAAAAAAAAAAAAEIAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAAADgAAABYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-01-17T16:21:25.11Z",
               "EditorCaption": ""

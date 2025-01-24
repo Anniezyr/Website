@@ -353,9 +353,10 @@ button:hover {
 .left-image iframe,
 .right-image iframe {
     width: 100%;
-    height:100%;
-    position:center;
+    height: auto;
+    aspect-ratio: 16 / 9;
     max-width: 500px;
+    margin: 0 auto;
     border-radius: 5px;
     display: block;
 }
@@ -461,17 +462,19 @@ section.my-work .section-heading {
     padding: 80px 45px 50px 45px;
 }
 
-.row.image-gallery{
-    columns: 100px;
-    gap:15px;
+.row.image-gallery {
+    columns: 120px; 
+    gap: 15px;
 }
 
-.row.image-gallery img{
-     margin-bottom:10px;
-     border-radius:5px;
-     max-width:90px;
-     height:auto;
+.row.image-gallery img {
+    display: block;
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+    margin-bottom: 10px;
 }
+
 
 /* Contact Me */
 section.contact-me {

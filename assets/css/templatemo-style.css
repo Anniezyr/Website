@@ -346,13 +346,13 @@ button:hover {
 .left-image img,
 .right-image img {
     border-radius: 5px;
+    padding-bottom: 56.25%;
 }
 
 .left-image iframe,
 .right-image iframe {
     width: 100%;
     max-width: 500px;
-    height: 450px;
     border-radius: 5px;
     display: block;
     margin-top: 30px;
@@ -573,45 +573,6 @@ figure.snip1321 i {
   line-height: 40px;
   border-radius: 5px;
   color: #fff;
-}
-figure.snip1321:after {
-  background-color: #ffffff;
-  position: absolute;
-  content: "";
-  display: block;
-  top: 20px;
-  left: 20px;
-  right: 20px;
-  bottom: 20px;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-  -webkit-transform: rotateX(-90deg);
-  transform: rotateX(-90deg);
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  opacity: 0;
-}
-figure.snip1321 a {
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: 1;
-}
-figure.snip1321:hover figcaption,
-figure.snip1321.hover figcaption {
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  opacity: 1;
-  -webkit-transition-delay: 0.2s;
-  transition-delay: 0.2s;
-}
-figure.snip1321:hover:after,
-figure.snip1321.hover:after {
-  -webkit-transform: rotateX(0);
-  transform: rotateX(0);
-  opacity: 0.9;
 }
 
 

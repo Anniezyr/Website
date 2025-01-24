@@ -3,6 +3,7 @@
     "",
     "\\assets",
     "\\assets\\css",
+    "\\assets\\images",
     "\\vendor",
     "\\vendor\\bootstrap",
     "\\vendor\\bootstrap\\css"

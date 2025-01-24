@@ -354,10 +354,10 @@ button:hover {
 .right-image iframe {
     width: 100%;
     height:100%;
+    position:center;
     max-width: 500px;
     border-radius: 5px;
     display: block;
-    position: relative;
 }
 
 
@@ -462,14 +462,14 @@ section.my-work .section-heading {
 }
 
 .row.image-gallery{
-    columns: 250px;
+    columns: 100px;
     gap:15px;
 }
 
 .row.image-gallery img{
      margin-bottom:10px;
      border-radius:5px;
-     max-width:100px;
+     max-width:90px;
      height:auto;
 }
 

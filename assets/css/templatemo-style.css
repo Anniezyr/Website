@@ -348,6 +348,18 @@ button:hover {
     border-radius: 5px;
 }
 
+.left-image iframe,
+.right-image iframe {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+}
+
+
+
 .right-image-post h4,
 .left-image-post h4 {
     margin-top: 30px;

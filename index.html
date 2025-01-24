@@ -215,10 +215,14 @@ https://templatemo.com/tm-531-reflux
         });
       };
 
-      $(".main-menu").on("click", "a", function(e) {
-        e.preventDefault();
-        showSection($(this).attr("href"), true);
-      });
+        $(".main-menu").on("click", "a", function (e) {
+            const href = $(this).attr("href");
+            if (href.startsWith("http") || href.startsWith("https")) {
+                return;
+            }
+            e.preventDefault();
+            showSection(href, true);
+        });
 
       $(window).scroll(function() {
         checkSection();

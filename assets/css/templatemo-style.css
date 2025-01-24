@@ -1,6 +1,6 @@
 /*
 
-Reflux Template
+eflux Template
 
 https://templatemo.com/tm-531-reflux
 
@@ -352,12 +352,11 @@ button:hover {
 .right-image iframe {
     width: 100%;
     max-width: 500px;
-    height: auto;
+    height: 450px;
     border-radius: 5px;
     display: block;
-    margin: 0 auto;
+    margin-top: 30px;
 }
-
 
 
 .right-image-post h4,

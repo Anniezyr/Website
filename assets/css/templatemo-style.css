@@ -338,7 +338,7 @@ button:hover {
 
 
 /* Left & Right Post */
-.left-image-post
+.left-image-post,
 .right-image-post {
     margin-top: 60px;
     padding-top: 60px;
@@ -353,7 +353,7 @@ button:hover {
 .left-image iframe,
 .right-image iframe {
     width: 100%;
-    height:100%;
+    height:auto;
     max-width: 500px;
     max-height:280px;
     border-radius: 5px;

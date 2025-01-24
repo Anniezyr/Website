@@ -154,6 +154,8 @@ html {
     font-size: 13px;
     font-style: italic;
     color: #fff;
+    white-space: pre-line;
+    text-align: center;
 }
 
 .menu .copyright-text {
@@ -336,7 +338,7 @@ button:hover {
 
 
 /* Left & Right Post */
-
+.left-image-post
 .right-image-post {
     margin-top: 60px;
     padding-top: 60px;

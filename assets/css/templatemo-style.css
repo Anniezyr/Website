@@ -353,12 +353,13 @@ button:hover {
 .left-image iframe,
 .right-image iframe {
     width: 100%;
-    height:auto;
     max-width: 500px;
-    max-height:280px;
     border-radius: 5px;
     display: block;
     margin-top: 30px;
+    position: relative;
+    height: 0;
+    padding-top: 56.25%;
 }
 
 

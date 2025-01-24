@@ -350,16 +350,23 @@ button:hover {
     border-radius: 5px;
 }
 
-.left-image iframe,
-.right-image iframe {
+.video-wrapper {
+    position: relative;
     width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9;
     max-width: 500px;
+    padding-top: 56.25%;
     margin: 0 auto;
-    border-radius: 5px;
-    display: block;
 }
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
 
 
 .right-image-post h4,
@@ -463,16 +470,14 @@ section.my-work .section-heading {
 }
 
 .row.image-gallery {
-    columns: 120px; 
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     gap: 15px;
 }
 
 .row.image-gallery img {
     display: block;
     width: 100%;
-    max-width: 120px;
-    height: auto;
-    margin-bottom: 10px;
 }
 
 

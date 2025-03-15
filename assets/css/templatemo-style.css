@@ -304,10 +304,8 @@ html {
     width: 100%;
 }
 .white-button-container.two-buttons {
-    justify-content: space-between;
-
+    justify-content: space-evenly;
 }
-
 
 .white-button a {
     display: inline-block;

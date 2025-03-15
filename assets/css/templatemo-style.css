@@ -297,6 +297,17 @@ html {
 
 
 /* Buttons */
+.white-button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+.white-button-container.two-buttons {
+    justify-content: space-between;
+
+}
+
 
 .white-button a {
     display: inline-block;
@@ -330,11 +341,12 @@ button {
     cursor: pointer;
 }
 
-button:hover {
-    outline: none;
-    background-color: #a43f49;
-    color: #fff;
-}
+    button:hover {
+        outline: none;
+        background-color: #a43f49;
+        color: #fff;
+    }
+
 
 
 /* Left & Right Post */

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+
+    <title>Duolatera</title>
+<!--
+Reflux Template
+https://templatemo.com/tm-531-reflux
+-->
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/templatemo-style.css" />
+    <link rel="stylesheet" href="assets/css/owl.css" />
+    <link rel="stylesheet" href="assets/css/lightbox.css" />
+  </head>
+
+  <body class="is-preload">
+      <!-- Header -->
+      <section id="one" class="main style3" style="background-color: #ffffff;">
+          <div class="container">
+              <div class="row gtr-150">
+                  <div class="col-8 col-12-medium imp-medium">
+                      <a href="index.html" style="text-align: right; margin-right: 5%; font-size:30px" target="_self"><font color="358376" ;>About Me</font></a>
+                      <a href="Duolatera.html" style="text-align: right; margin-right: 5%; font-size:30px" target="_self"><font color="358376">Duolatera</font></a>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <!-- One -->
+      <section id="one" class="main style2">
+          <div class="container">
+              <h1 style="text-align: center;">
+                  <b>Duolatera</b>
+              </h1>
+              <h3 style="font-style: italic; text-align: center;">
+                  An online VR 2-players co-op puzzle game.
+              </h3>
+              <div class="row gtr-150">
+                  <div class="col-6 col-12-medium">
+                      <h4>
+                          <b>Overview</b>
+                      </h4>
+                      <p>
+                          This is an online VR 2-players co-op puzzle game.
+                          In this game, 2 players will connect through their Steam accounts and work together to solve a series of puzzles in a VR environment.
+                          Players will traverse through the overworld and the underworld using laser triggered portals and find their way back to earth by interacting with various devices.
+                      </p>
+                      <p>
+                          Project Website: <a href="https://drifters-msgdd.github.io/"> <b>Duolatera</b> </a>
+                          <br />
+                          Try it out here:
+                          <a href="https://drive.google.com/file/d/1wOtnj-SyZd5ifnVirCe8KGhSxMT-4qs-/view"> <b>Google Drive Download</b> </a>
+                      </p>
+                      <p>
+                          <br /><br />
+                          Here is the gameplay video for Act1 & Act2. <b>↓</b>
+                      </p>
+                  </div>
+                  <div class="col-6 col-12-medium">
+                      <h4>
+                          <b>Duration</b>
+                      </h4>
+                      <p>
+                          6 months, 2024.8 - now
+                      </p>
+                      <h4>
+                          <b>Team Size</b>
+                      </h4>
+                      <p>
+                          5
+                      </p>
+                      <h4>
+                          <b>My Role</b>
+                      </h4>
+                      <p>
+                          Technical Artist, Gameplay/Graphics Programmer
+                      </p>
+                      <h4>
+                          <b>Tools and Environment</b>
+                      </h4>
+                      <p>
+                          Unreal Engine 5, C++, HLSL, Forward Rendering
+                      </p>
+                  </div>
+              </div>
+
+              <iframe width="720" height="720" src="https://www.youtube.com/embed/d44bLRqTe-4" style="margin-left: 18%;"></iframe>
+              <br /><br />
+              <h2>
+                  <b>Shaders</b>
+              </h2>
+              <h3>
+                  <b>Global Cel-Shading</b>
+              </h3>
+              <div class="row gtr-150">
+                  <div class="col-6 col-12-medium">
+                      <p style="margin-bottom: 1em;">
+                          The overall art style of Duolatera is low-poly and cartoonish, therfore, we decided to use cel-shading as our render style.
+                          <br />
+                          Due to multiple reasons such as framrates and Duolatera being a VR game, we use forward shading as our rendering pipeline(default UE5 VR setting).
+                          Normally, cel-shading in deffered rendering is achieved by accessing the G-Buffer for various data and applying post-process effect on the whole scene.
+                          Using forward rendering means that there is no G-Buffer for me to use and therfore I have to find another way around.
+                      </p>
+                      <p style="margin-bottom: 1em;">
+                          In order to achieve the cel-shading effect, I replicated the phong model and created a material function that converts the input color and textures to cel-shading color.
+                          I then made a master material using this material function and now artists can easily simply make a material instance of this master material and play with the parameters on the panels.
+                      </p>
+                      <p style="margin-bottom: 1em;">
+                          This material allows albedo textures, basic tint and up to 3 different RGB texutures on 1 object.
+                      </p>
+                  </div>
+                  <div class="col-6 col-12-medium">
+                      <div class="row gtr-150">
+                          <div class="col-6 col-12-medium">
+                              <span class="image fit"><img src="images/Cel_VRPawn.png" alt="" /></span>
+                              <span class="image fit"><img src="images/Cel_Lasertool.png" alt="" /></span>
+                              <span class="image fit"><img src="images/Cel_Ball.png" alt="" /></span>
+                          </div>
+                          <div class="col-6 col-12-medium">
+                              <span class="image fit"><img src="images/Cel_Pillar.png" alt="" /></span>
+                              <span class="image fit"><img src="images/Cel_RingSensor.png" alt="" /></span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <h3>
+                  <b>Portal VFX Between 2 Worlds</b>
+              </h3>
+              <div class="row gtr-150">
+                  <div class="col-6 col-12-medium">
+                      <p style="margin-bottom: 1em;">
+                          One of the main mechanisms of Duolatera is Portals. Portals exist through out the whole gameplay and they always appear in pairs.
+                          If a portal exists in the Overworld, a corresponding portal must also exists in the Underworld on the same spot. Players travel between worlds through these portals to solve the puzzles.
+                      </p>
+                      <p style="margin-bottom: 1em;">
+                          Portals are all closed by default and are triggered only by "tagging" with laser tools.
+                          Here is a triggered portal in the Overworld and its corresponding portal in the Underworld.
+                      </p>
+                      <p style="margin-bottom: 1em;">
+                          The portal shader consists of 2 different materials: A <i>base material</i> and an <i>overlay material</i>.
+                      </p>
+                      <p style="margin-bottom: 1em;">
+                          <b>Base portal material</b> is the scene texture captured by invisible cameras from the corresponding portal resulting in the "seethrough" effect.
+                      </p>
+                      <p style="margin-bottom: 1em;">
+                          <b>Overlay portal material</b> is the VFX part of the material. It consists of distortion, "vortex" effects and allows customizations during spawning.
+                          Since portal VFX looks different in Overworld and Underworld, their materials are spawned when portals are triggered open.
+                      </p>
+                  </div>
+                  <div class="col-6 col-12-medium">
+                      <span class="image fit" style="margin-bottom: 1em;"><img src="images/OverworldPortal.gif" alt="" /></span>
+                      <p style="margin-top: 1em; text-align: center;">
+                          <b>Overworld Portal</b>
+                      </p>
+                      <span class="image fit" style="margin-bottom: 1em;"><img src="images/UnderworldPortal.gif" alt="" /></span>
+                      <p style="margin-top: 1em; text-align: center;">
+                          <b>Underworld Portal</b>
+                      </p>
+                  </div>
+              </div>
+              <h3>
+                  <b>Visual Indication Shaders</b>
+              </h3>
+              <div class="row gtr-150">
+                  <div class="col-6 col-12-medium">
+                      <p style="margin-bottom: 1em;">
+                          There are several kinds of props that player can interact with. 2 of the most important ones are "Taggables" and "Interactables".
+                          "Taggables" are the ones that players can shoot with their laser guns and "Interactables" are the ones that players can interact with their VR hands.
+                          It's important that players can distinguish between different types of props so they can interact with them the way we intend.
+                      </p>
+                      <p style="margin-bottom: 1em;">
+                          <b>Taggable material</b> is a continuous 3D overlay material which works with all the props in the scene regardless of the object's location and rotation.
+                          Since the material is continuous in space, objects that are close to each other looks like they are under the same piece of texture.
+                      </p>
+                      <p style="margin-bottom: 1em;">
+                          <b>Interactable material</b> is a world-space material which only takes the object's Z location value into account.
+                          It is commonly used in many games as indication for something that is interactable.
+                      </p>
+                      <p style="margin-bottom: 1em;">
+                          I'm also in charge of a variaty of other visual indications in Duolatera such as outline material and aura material.
+                      </p>
+                  </div>
+                  <div class="col-6 col-12-medium">
+                      <span class="image fit" style="margin-bottom: 1em;"><img src="images/TaggableMat.gif" alt="" /></span>
+                      <p style="margin-top: 1em; text-align: center;">
+                          <b>Taggable Material</b>
+                      </p>
+                      <span class="image fit" style="margin-bottom: 1em;"><img src="images/InteractableMat.gif" alt="" /></span>
+                      <p style="margin-top: 1em; text-align: center;">
+                          <b>Interactable Material</b>
+                      </p>
+                  </div>
+              </div>
+              <h2>
+                  <b>Gameplay</b>
+              </h2>
+              <h3>
+                  <b>Act2</b>
+              </h3>
+              <div class="row gtr-150">
+                  <div class="col-6 col-12-medium">
+                      <p style="margin-bottom: 1em;">
+                          As a MVP, Duolatera consists of 3 main acts.
+                          I am in charge of the implementation of all the gameplay and visuals in Act2.
+                      </p>
+                  </div>
+              </div>
+              <h3>
+                  <b>Save & Load Game System</b>
+              </h3>
+              <div class="row gtr-150">
+                  <div class="col-6 col-12-medium">
+                      <p style="margin-bottom: 1em;">
+
+                      </p>
+                  </div>
+              </div>
+              <h3>
+                  <b>Menu System</b>
+              </h3>
+              <div class="row gtr-150">
+                  <div class="col-6 col-12-medium">
+                      <p style="margin-bottom: 1em;">
+                          Duolatera has a main menu and an in-game menu. In the main menu, players can start the game/tutorial, calibrate themselves or exit the game.
+                          In the in-game menu, players can leave game, calibrate themselves and change voice chat settings.
+                      </p>
+                      <p style="margin-bottom: 1em;">
+                          For the main menu, I implemented the UI functionality as well as game pairing functionalities. To start playing, players can either create sessions or join existing sessions.
+                      </p>
+                      <p style="margin-bottom: 1em;">
+                          For the in-game menu, I implemented the UI functionality and voice chat related functionalities. Players can enable, disable voice chat or set it to push to talk.
+                      </p>
+                  </div>
+                  <div class="col-6 col-12-medium">
+                      <div class="row gtr-150">
+                          <div class="col-6 col-12-medium">
+                              <span class="image fit"><img src="images/MainMenu.png" alt="" /></span>
+                              <span class="image fit"><img src="images/SubMenu.png" alt="" /></span>
+                          </div>
+                          <div class="col-6 col-12-medium">
+                              <span class="image fit"><img src="images/GameSession.png" alt="" /></span>
+                              <span class="image fit"><img src="images/CreateGame.png" alt="" /></span>
+                              <span class="image fit"><img src="images/JoinGame.png" alt="" /></span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <h3>
+                  <b>Dialogue System</b>
+              </h3>
+              <div class="row gtr-150">
+                  <div class="col-6 col-12-medium">
+                      <p style="margin-bottom: 1em;">
+                          I implemented the dialogue system for the onboarding level. This is intended as a tool for designers to arrange dialogue prompts for onborading.
+                      </p>
+                  </div>
+                  <div class="col-6 col-12-medium">
+                      <div class="col-6 col-12-medium">
+                          <span class="image fit"><img src="images/Dialogue.png" alt="" /></span>
+                      </div>
+                  </div>
+              </div>
+              <div class="row gtr-150">
+                  <div class="col-6 col-12-medium">
+                      <p style="margin-bottom: 1em;">
+                          Designers can easily add, delete or move an entry. It is also a handy tool for them to set the desired input or lasting time for players to continue to the next promt.
+                          By unchecking the "can continue" box, designers can set custom events to take place before the next dialogue entry.
+                      </p>
+                  </div>
+                  <div class="col-6 col-12-medium">
+                      <div class="col-6 col-12-medium">
+                          <span class="image fit"><img src="images/DialogueSystem.png" alt="" /></span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <!-- Scripts -->
+      <!-- Bootstrap core JavaScript -->
+      <script src="vendor/jquery/jquery.min.js"></script>
+      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+      <script src="assets/js/isotope.min.js"></script>
+      <script src="assets/js/owl-carousel.js"></script>
+      <script src="assets/js/lightbox.js"></script>
+      <script src="assets/js/custom.js"></script>
+      <script>
+          // href
+          $(".main-menu").on("click", "a", function (e) {
+              const href = $(this).attr("href");
+              if (href.startsWith("http") || href.startsWith("https")) {
+                  return;
+              }
+              e.preventDefault();
+              showSection(href, true);
+          });
+
+          $(window).scroll(function () {
+              checkSection();
+          });
+
+          //button amount
+          window.onload = function () {
+              const container = document.querySelector('.white-button-container');
+              const buttons = container.querySelectorAll('.white-button');
+
+              if (buttons.length === 2) {
+                  container.classList.add('two-buttons');
+              } else {
+                  container.classList.remove('two-buttons');
+              }
+          };
+      </script>
+  </body>
+</html>

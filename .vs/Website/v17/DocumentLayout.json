@@ -22,21 +22,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Duolatera.html",
-              "DocumentMoniker": "D:\\Software\\Website\\Website\\Duolatera.html",
-              "RelativeDocumentMoniker": "Duolatera.html",
-              "ToolTip": "D:\\Software\\Website\\Website\\Duolatera.html",
-              "RelativeToolTip": "Duolatera.html",
-              "ViewState": "AgIAAH8AAAAAAAAAAAAAAJcAAABcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-03-15T18:01:27.306Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -45,9 +32,22 @@
               "RelativeDocumentMoniker": "assets\\css\\templatemo-style.css",
               "ToolTip": "D:\\Software\\Website\\Website\\assets\\css\\templatemo-style.css",
               "RelativeToolTip": "assets\\css\\templatemo-style.css",
-              "ViewState": "AgIAAOoCAAAAAAAAAAAAAL0CAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAOoCAAAAAAAAAAAAAAMDAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-01-17T22:09:52.685Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Duolatera.html",
+              "DocumentMoniker": "D:\\Software\\Website\\Website\\Duolatera.html",
+              "RelativeDocumentMoniker": "Duolatera.html",
+              "ToolTip": "D:\\Software\\Website\\Website\\Duolatera.html",
+              "RelativeToolTip": "Duolatera.html",
+              "ViewState": "AgIAACQBAAAAAAAAAAAAADABAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-03-15T18:01:27.306Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -57,10 +57,9 @@
               "RelativeDocumentMoniker": "index.html",
               "ToolTip": "D:\\Software\\Website\\Website\\index.html",
               "RelativeToolTip": "index.html",
-              "ViewState": "AgIAAKIAAAAAAAAAAAAAAJ8AAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAMMAAAAAAAAAAAAAAJ8AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-01-17T16:21:25.11Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-17T16:21:25.11Z"
             }
           ]
         }

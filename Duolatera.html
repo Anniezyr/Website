@@ -31,17 +31,17 @@ https://templatemo.com/tm-531-reflux
   <body>
       <div id="page-wraper">
           <!-- Header -->
-          <section id="one" class="main style3" style="background-color: #ffffff;">
+          <section id="one" class="main style3" style="background-color: #a43f49; padding-top: 1%; padding-bottom: 1%; ">
               <div class="container">
                   <div class="row gtr-150">
                       <div class="col-8 col-12-medium imp-medium">
-                          <a href="index.html" style="text-align: right; margin-right: 5%; font-size:30px" target="_self"><font color="358376" ;>About Me</font></a>
-                          <a href="Duolatera.html" style="text-align: right; margin-right: 5%; font-size:30px" target="_self"><font color="358376">Duolatera</font></a>
+                          <a href="index.html" style="text-align: right; margin-right: 5%; font-size:30px" target="_self"><font color="FFFFFF" ;>About Me</font></a>
+                          <a href="Duolatera.html" style="text-align: right; margin-right: 5%; font-size:30px" target="_self"><font color="FFFFFF">Duolatera</font></a>
                       </div>
                   </div>
               </div>
           </section>
-
+          <br>
           <!-- One -->
           <section id="one" class="main style2">
               <div class="container">
@@ -51,6 +51,8 @@ https://templatemo.com/tm-531-reflux
                   <h3 style="font-style: italic; text-align: center;">
                       An online VR 2-players co-op puzzle game.
                   </h3>
+                  <div style=" width: 60px; height: 3px; background-color: #a43f49; margin: 10px auto"></div>
+                  <br /><br />
                   <div class="row gtr-150">
                       <div class="col-6 col-12-medium">
                           <h4>
@@ -61,15 +63,16 @@ https://templatemo.com/tm-531-reflux
                               In this game, 2 players will connect through their Steam accounts and work together to solve a series of puzzles in a VR environment.
                               Players will traverse through the overworld and the underworld using laser triggered portals and find their way back to earth by interacting with various devices.
                           </p>
+                          <h4>
+                              <b>My Role</b>
+                          </h4>
                           <p>
-                              Project Website: <a href="https://drifters-msgdd.github.io/"> <b>Duolatera</b> </a>
-                              <br />
-                              Try it out here:
-                              <a href="https://drive.google.com/file/d/1wOtnj-SyZd5ifnVirCe8KGhSxMT-4qs-/view"> <b>Google Drive Download</b> </a>
+                              Creative Lead & Level Design
                           </p>
                           <p>
                               <br /><br />
-                              Here is the gameplay video for Act1 & Act2. <b>↓</b>
+                              The game currently has a tutorial level and three acts. I am responsible for the tutorial, Act 1, and Act 2.
+                              Here is the gameplay video for Act 1-3. <b>↓</b>
                           </p>
                       </div>
                       <div class="col-6 col-12-medium">
@@ -86,12 +89,6 @@ https://templatemo.com/tm-531-reflux
                               5
                           </p>
                           <h4>
-                              <b>My Role</b>
-                          </h4>
-                          <p>
-                              Technical Artist, Gameplay/Graphics Programmer
-                          </p>
-                          <h4>
                               <b>Tools and Environment</b>
                           </h4>
                           <p>
@@ -99,62 +96,234 @@ https://templatemo.com/tm-531-reflux
                           </p>
                       </div>
                   </div>
-
-                  <iframe width="720" height="720" src="https://www.youtube.com/embed/d44bLRqTe-4" style="margin-left: 18%;"></iframe>
+                  <div class="video-wrapper">
+                      <iframe src="https://www.youtube.com/embed/I1gRbKmDvMs" frameborder="0" allowfullscreen></iframe>
+                  </div>
                   <br /><br />
+                  <h2>
+                      <b>Mechanics</b>
+                  </h2>
+                  <div style="width: 60px; height: 3px; background-color: #a43f49; margin: 10px auto; position: relative; right: 47.5%;"></div>
+                  <br />
                   <h3>
-                      <b>Portal VFX Between 2 Worlds</b>
+                      <b>Mirrored world and Portal</b>
                   </h3>
                   <div class="row gtr-150">
                       <div class="col-6 col-12-medium">
                           <p style="margin-bottom: 1em;">
-                              One of the main mechanisms of Duolatera is Portals. Portals exist through out the whole gameplay and they always appear in pairs.
-                              If a portal exists in the Overworld, a corresponding portal must also exists in the Underworld on the same spot. Players travel between worlds through these portals to solve the puzzles.
+                              <b>Overworld</b> and <b>Underworld</b> are the core mechanics of this puzzle game. The two worlds can be understood as distinct areas with similar architectural structures. Props used for puzzles will be located in different areas of the Overworld and Underworld, and players will need to explore both worlds to solve the puzzles.
                           </p>
                           <p style="margin-bottom: 1em;">
-                              Portals are all closed by default and are triggered only by "tagging" with laser tools.
-                              Here is a triggered portal in the Overworld and its corresponding portal in the Underworld.
+                              <b>Partol </b> will serve as the tool connecting the Overworld and Underworld. Players can use their laser tool to draw a circle on the Portal Canvas to activate a portal when it is in the off state. Throughout the level, there will only be one active portal at a time. When a player activates another portal, the previously active portal will automatically close.
                           </p>
                           <p style="margin-bottom: 1em;">
-                              The portal shader consists of 2 different materials: A <i>base material</i> and an <i>overlay material</i>.
-                          </p>
-                          <p style="margin-bottom: 1em;">
-                              <b>Base portal material</b> is the scene texture captured by invisible cameras from the corresponding portal resulting in the "seethrough" effect.
-                          </p>
-                          <p style="margin-bottom: 1em;">
-                              <b>Overlay portal material</b> is the VFX part of the material. It consists of distortion, "vortex" effects and allows customizations during spawning.
-                              Since portal VFX looks different in Overworld and Underworld, their materials are spawned when portals are triggered open.
+                              Additionally,when players are in the Underworld, their laser tool will be disabled, and they will be unable to shoot lasers.
                           </p>
                       </div>
                       <div class="col-6 col-12-medium">
-                          <span class="image fit" style="margin-bottom: 1em;"><img src="images/OverworldPortal.gif" alt="" /></span>
-                          <p style="margin-top: 1em; text-align: center;">
-                              <b>Overworld Portal</b>
-                          </p>
-                          <span class="image fit" style="margin-bottom: 1em;"><img src="images/UnderworldPortal.gif" alt="" /></span>
-                          <p style="margin-top: 1em; text-align: center;">
-                              <b>Underworld Portal</b>
-                          </p>
+                          <div class="row gtr-150">
+                              <div class="col-6 col-12-medium">
+                                  <span class="image fit"><img src="assets/images/bakery.png" alt="" /></span>
+                              </div>
+                              <div class="col-6 col-12-medium">
+                                  <span class="image fit"><img src="assets/gif/Portal.gif" alt="" /></span>
+                              </div>
+                          </div>
                       </div>
                   </div>
+                  <h3>
+                      <b>Partner Button</b>
+                  </h3>
+                  <div class="row gtr-150">
+                      <div class="col-6 col-12-medium">
+                          <p style="margin-bottom: 1em;">
+                              <b>Button</b>, as a basic prop in the game, requires players to interact with the top sphere of the button using their VR hands. Through the collision box interaction, the animation of the sphere will show it being pressed down.
+                          </p>
+                          <p style="margin-bottom: 1em;">
+                              <b>Partner button</b> refers to a mechanism in the game where both players need to activate their respective buttons simultaneously to activate the game objectives connected to the partner button. Once the partner button is activated, it will remain in an active state, allowing players to move their hands and continue exploring the surroundings.
+                          </p>
+                      </div>
+                      <div class="col-6 col-12-medium">
+                          <div class="row gtr-150">
+                              <div class="col-6 col-12-medium">
+                                  <span class="image fit"><img src="assets/images/bakery.png" alt="" /></span>
+                              </div>
+                              <div class="col-6 col-12-medium">
+                                  <span class="image fit"><img src="assets/gif/PartnerButton.gif" alt="" /></span>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <h3>
+                      <b>Ring Sensor</b>
+                  </h3>
+                  <div class="row gtr-150">
+                      <div class="col-6 col-12-medium">
+                          <p style="margin-bottom: 1em;">
+                              <b>Ring sensor</b>,is a virtual alien interaction device in our game. Players need to place their VR hands into the center of the device to activate the objects connected to the ring sensor. At the same time, if the player's hand moves beyond a certain range, the ring sensor will be deactivated, and the linked objects will also be deactivated. Therefore, to maintain the activation state, players must stay in place and keep their hand in position.
+                          </p>
+                      </div>
+                      <div class="col-6 col-12-medium">
+                          <div class="row gtr-150">
+                              <div class="col-6 col-12-medium">
+                                  <span class="image fit"><img src="assets/images/bakery.png" alt="" /></span>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <h3>
+                      <b>Symbols</b>
+                  </h3>
+                  <div class="row gtr-150">
+                      <div class="col-6 col-12-medium">
+                          <p style="margin-bottom: 1em;">
+                              <b>Symbols</b> appear in pairs in the game. Players are required to shoot at two symbols with the same glyph.
+                          <p style="margin-bottom: 1em;">
+                              <b>State</b> represents the current interaction form of the symbol, with a total of five states.
+                          </p>
+                          <p style="margin-bottom: 1em;">
+                              In the first two states,"inactive" and "lit", the laser fired by the laser tool has no effect. The difference between these states is that when in the inactive state, the glyph on the symbol is invisible, while in the lit state, the glyph is visible.
+                          </p>
+                          <p style="margin-bottom: 1em;">
+                              When in the activatable state, the laser fired by the laser tool will activate the symbol if it is shot for 3 seconds.
+                          </p>
+                          <p style="margin-bottom: 1em;">
+                              When in the active state, this means the symbol has been successfully shot, but it must wait for the corresponding symbol to also be activated. If the player stops shooting, the symbol will return to the activatable state.
+                          </p>
+                          <p style="margin-bottom: 1em;">
+                              Only when both players have shot and maintained the active state of their corresponding symbols will the pair of symbols reach the activated state.
+                          </p>
+                          <p style="margin-bottom: 1em;">
+                              The single symbol only exists in the tutorial level,so single button will jump through the state of active.
+                          </p>
+                      </div>
+                      <div class="col-6 col-12-medium">
+                          <div class="row gtr-150">
+                              <div class="col-6 col-12-medium">
+                                  <span class="image fit"><img src="assets/images/bakery.png" alt="" /></span>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <br />
                   <h2>
-                      <b>Gameplay</b>
+                      <b>Level</b>
                   </h2>
+                  <div style="width: 60px; height: 3px; background-color: #a43f49; margin: 10px auto; position: relative; right: 47.5%;"></div>
+                  <br />
+                  <h3>
+                      <b>Single-player tutorial level</b>
+                  </h3>
+                  <div class="row gtr-150">
+                      <div class="col-6 col-12-medium">
+                          <p style="margin-bottom: 1em;">
+                              To ensure that players, even those with no prior VR gaming experience or unfamiliar with using VR controllers, can successfully
+                              play our game, the game starts with a tutorial level. I first designed a corner where players can learn how to teleport and
+                              snap-turn. Once players master these two actions, they can move past this corner.
+                          </p>
+                          <p style="margin-bottom: 1em;">
+                              Next, our game requires players to use their VR hands to interact with in-game props. So, when players figure out that they don’t
+                              need to press buttons, but instead need to physically interact with objects, they can proceed further.
+                          </p>
+                          <p style="margin-bottom: 1em;">
+                              In this room, players will continue to practice their teleporting, snap-turning, and interaction skills. After interacting with
+                              certain items, they will receive their laser tool holster and laser tool. This section will guide them in learning how to grab and interact with objects.
+                          </p>
+                          <p style="margin-bottom: 1em;">
+                              The game requires players to shoot a prop or symbols within the game to complete the tutorial. In this step, players will learn how to activate a single symbol.
+                          </p>
+                      </div>
+                      <div class="col-6 col-12-medium">
+                          <div class="row gtr-150">
+                              <div class="col-6 col-12-medium">
+                                  <span class="image fit"><img src="assets/images/bakery.png" alt="" /></span>
+                                  <span class="image fit"><img src="assets/images/bakery.png" alt="" /></span>
+                                  <span class="image fit"><img src="assets/images/bakery.png" alt="" /></span>
+                              </div>
+                              <div class="col-6 col-12-medium">
+                                  <span class="image fit"><img src="assets/images/bakery.png" alt="" /></span>
+                                  <span class="image fit"><img src="assets/images/bakery.png" alt="" /></span>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <h3>
+                      <b>Act1</b>
+                  </h3>
+                  <div class="row gtr-150">
+                      <div class="col-6 col-12-medium">
+                          <p style="margin-bottom: 1em;">
+                              In Act 1, players will be introduced to the basic mechanics. The concepts of the Overworld and Underworld will be introduced for the first time, and players will learn how to utilize the properties and mechanics of portals to solve puzzles. They will master how to shoot and open portals from a distance, as well as how to use an active portal to direct laser beams and interact with objects in the Underworld.
+                          </p>
+                          <p style="margin-bottom: 1em;">
+                              Additionally, players will be introduced to interacting with various props, such as the partner button, ring sensor, and symbols.
+                          </p>
+                          <p style="margin-bottom: 1em;">
+                              Act 1 is focused on familiarizing players with the functions of these props, with a relatively low difficulty level. The props will be introduced one at a time, ensuring that players aren’t overwhelmed with too much information and can easily grasp the core mechanics of the game.
+                          </p>
+                      </div>
+                      <div class="col-6 col-12-medium">
+                          <div class="row gtr-150">
+                              <div class="col-6 col-12-medium">
+                                  <span class="image fit"><img src="assets/images/bakery.png" alt="" /></span>
+                                  <span class="image fit"><img src="assets/images/bakery.png" alt="" /></span>
+                              </div>
+                              <div class="col-6 col-12-medium">
+                                  <span class="image fit"><img src="assets/images/bakery.png" alt="" /></span>
+                                  <span class="image fit"><img src="assets/images/bakery.png" alt="" /></span>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
                   <h3>
                       <b>Act2</b>
                   </h3>
                   <div class="row gtr-150">
                       <div class="col-6 col-12-medium">
                           <p style="margin-bottom: 1em;">
-                              As a MVP, Duolatera consists of 3 main acts.
-                              I am in charge of the implementation of all the gameplay and visuals in Act2.
+                              In Act 2, players will deepen their understanding of props and encounter variations in the basic usage of these props. In this level, Symbols will gain the "grabbable" property, transforming into Grabbable Symbols.
                           </p>
+                          <p style="margin-bottom: 1em;">
+                              A variety of new glyphs will be introduced, enhancing players' understanding of the concept of 'sets of symbols.' The core gameplay of this act will revolve around different glyphs and elements of memory-based puzzles. While memory will play a role, it will not be the primary focus of the game. In puzzles that require memorization, the content to be remembered will only refresh when the player enters a new phase, rather than resetting every time they fail.
+                          </p>
+                          <p style="margin-bottom: 1em;">
+                              Additionally, the puzzle difficulty will gradually rise across phases 1 to 3. Our goal is for players to constantly be challenged by new puzzle difficulties, feeling a sense of accomplishment and progression without becoming bored.
+                          </p>
+                      </div>
+                      <div class="col-6 col-12-medium">
+                          <div class="row gtr-150">
+                              <div class="col-6 col-12-medium">
+                                  <span class="image fit"><img src="assets/images/bakery.png" alt="" /></span>
+                              </div>
+                              <div class="col-6 col-12-medium">
+                                  <span class="image fit"><img src="assets/images/bakery.png" alt="" /></span>
+                              </div>
+                          </div>
                       </div>
                   </div>
               </div>
           </section>
+          <br>
       </div>
-      
+
+      <!-- Footer -->
+      <section id="footer">
+          <div class="container">
+              <div class="row gtr-150">
+                  <div class="col-6 col-12-medium">
+                      <p style="text-align:left; margin: 0 0 0 0; font-size: 1.25em;">
+                          <b>Annie Zhang</b>
+                      </p>
+                      <p style="text-align:left;  margin: 0 0 0 0;">
+                          Level Designer
+                      </p>
+                  </div>
+                  <div class="col-6 col-12-medium">
+                      Email: <a href="mailto: anniezyr26@gmail.com"> anniezyr26@gmail.com </a>
+                  </div>
+              </div>
+          </div>
+      </section>
 
       <!-- Scripts -->
       <!-- Bootstrap core JavaScript -->

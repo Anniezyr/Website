@@ -2,7 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\assets",
-    "\\assets\\css"
+    "\\assets\\gif",
+    "\\assets\\images"
   ],
+  "SelectedNode": "\\assets\\images\\bakery.png",
   "PreviewInSolutionExplorer": false
 }

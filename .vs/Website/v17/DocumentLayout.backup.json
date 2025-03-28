@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "D:\\Software\\Website\\Website\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Software\\Website\\Website\\RopeTool.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:RopeTool.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Software\\Website\\Website\\Duolatera.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Duolatera.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Software\\Website\\Website\\assets\\css\\templatemo-style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\css\\templatemo-style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Software\\Website\\Website\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -27,39 +23,28 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "RopeTool.html",
-              "DocumentMoniker": "D:\\Software\\Website\\Website\\RopeTool.html",
-              "RelativeDocumentMoniker": "RopeTool.html",
-              "ToolTip": "D:\\Software\\Website\\Website\\RopeTool.html",
-              "RelativeToolTip": "RopeTool.html",
-              "ViewState": "AgIAAN0AAAAAAAAAAAAqwOQAAABWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-03-17T06:33:19.696Z",
+              "Title": "templatemo-style.css",
+              "DocumentMoniker": "D:\\Software\\Website\\Website\\assets\\css\\templatemo-style.css",
+              "RelativeDocumentMoniker": "assets\\css\\templatemo-style.css",
+              "ToolTip": "D:\\Software\\Website\\Website\\assets\\css\\templatemo-style.css",
+              "RelativeToolTip": "assets\\css\\templatemo-style.css",
+              "ViewState": "AgIAAGQBAAAAAAAAAAAYwHoBAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-27T22:20:29.842Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Duolatera.html",
-              "DocumentMoniker": "D:\\Software\\Website\\Website\\Duolatera.html",
-              "RelativeDocumentMoniker": "Duolatera.html",
-              "ToolTip": "D:\\Software\\Website\\Website\\Duolatera.html",
-              "RelativeToolTip": "Duolatera.html",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAACYAAACnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-03-15T18:01:27.306Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "index.html",
               "DocumentMoniker": "D:\\Software\\Website\\Website\\index.html",
               "RelativeDocumentMoniker": "index.html",
               "ToolTip": "D:\\Software\\Website\\Website\\index.html",
               "RelativeToolTip": "index.html",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAAI4AAAA/AAAAAAAAAA==",
+              "ViewState": "AgIAALoAAAAAAAAAAAAowNgAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-01-17T16:21:25.11Z"
+              "WhenOpened": "2025-01-17T16:21:25.11Z",
+              "EditorCaption": ""
             }
           ]
         }

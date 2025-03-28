@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\assets",
+    "\\assets\\css",
     "\\assets\\gif",
     "\\assets\\images"
   ],
+  "SelectedNode": "\\assets\\css\\templatemo-style.css",
   "PreviewInSolutionExplorer": false
 }

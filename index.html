@@ -110,7 +110,7 @@ https://templatemo.com/tm-531-reflux
                                         </p>
                                         <div class="white-button-container">
                                             <div class="white-button">
-                                                <a href="https://driftersgames.itch.io/duolatera">Game Build</a>
+                                                <a href="https://driftersgames.itch.io/duolatera" target="_blank">Game Build</a>
                                             </div>
                                             <div class="white-button">
                                                 <a href="Duolatera.html" target="_blank">Details</a>
@@ -140,7 +140,7 @@ https://templatemo.com/tm-531-reflux
                                     <div class="right-text">
                                         <h4>Rope Tool</h4>
                                         <p style="color: #e0e0e0; font-weight: 300; font-size: 1em;">
-                                            A 2D physics-based game <br>
+                                            A 2D physics-based space shooter game <br>
                                             Unity | 3 mo | group project | Level Design
                                         </p>
                                         <p>
@@ -154,10 +154,12 @@ https://templatemo.com/tm-531-reflux
                                             onboarding levels by turning ideas into functional elements
                                             in the game engine, ensuring a smooth and engaging player introduction.
                                         </p>
-
                                         <div class="white-button-container">
                                             <div class="white-button">
                                                 <a href="https://store.steampowered.com/app/2958730/Project_Rope_Tool/" target="_blank">Steam Page</a>
+                                            </div>
+                                            <div class="white-button">
+                                                <a href="RopeTool.html" target="_blank">Details</a>
                                             </div>
                                         </div>
                                     </div>
@@ -455,15 +457,18 @@ https://templatemo.com/tm-531-reflux
       });
 
       //button amount
-      window.onload = function() {
-        const container = document.querySelector('.white-button-container');
-        const buttons = container.querySelectorAll('.white-button');
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.querySelector('.white-button-container');
+            if (container) {
+                const buttons = container.querySelectorAll('.white-button');
         
-        if (buttons.length === 2) {
-            container.classList.add('two-buttons');
-        } else {
-            container.classList.remove('two-buttons');
-        }
+                if (buttons.length === 2) {
+                    container.classList.add('two-buttons');
+                } else {
+                    container.classList.remove('two-buttons');
+                }
+            }
+        });
     };
     </script>
   </body>

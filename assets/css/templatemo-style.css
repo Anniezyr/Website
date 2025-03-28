@@ -305,6 +305,7 @@ html {
 }
 .white-button-container.two-buttons {
     justify-content: space-evenly;
+    gap: 5px;
 }
 
 .white-button a {
@@ -359,9 +360,23 @@ button {
     height: 100%;
 }
 
+.row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
 .left-image,
 .right-image {
     border-radius: 5px;
+}
+
+.left-image {
+    margin-right: 30px;
+}
+
+.right-image {
+    margin-left: 30px;
 }
 
 .video-wrapper {

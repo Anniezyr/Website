@@ -2,10 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\assets",
-    "\\assets\\css",
     "\\assets\\gif",
-    "\\assets\\images"
+    "\\assets\\gif\\Warped",
+    "\\assets\\images",
+    "\\assets\\images\\Warped"
   ],
-  "SelectedNode": "\\assets\\gif\\PracticeSwingWIthRocket.gif",
   "PreviewInSolutionExplorer": false
 }

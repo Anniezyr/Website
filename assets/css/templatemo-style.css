@@ -276,7 +276,13 @@ html {
 }
 
 .section-heading h2 {
-    font-size: 32px;
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.section-heading h3 {
+    font-size: 28px;
     font-weight: 700;
     color: #fff;
 }

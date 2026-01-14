@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\Software\\Website\\Website\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Software\\Website\\Website\\HellCat.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HellCat.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Software\\Website\\Website\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Software\\Website\\Website\\RopeTool.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:RopeTool.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Software\\Website\\Website\\HellCat.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HellCat.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Software\\Website\\Website\\Warped.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -34,19 +34,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "HellCat.html",
               "DocumentMoniker": "D:\\Software\\Website\\Website\\HellCat.html",
               "RelativeDocumentMoniker": "HellCat.html",
               "ToolTip": "D:\\Software\\Website\\Website\\HellCat.html",
               "RelativeToolTip": "HellCat.html",
-              "ViewState": "AgIAABsAAAAAAAAAAAAQwDYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAQwGkAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-01-13T20:15:31.664Z"
+              "WhenOpened": "2026-01-13T20:15:31.664Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -62,7 +63,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "RopeTool.html",
               "DocumentMoniker": "D:\\Software\\Website\\Website\\RopeTool.html",
               "RelativeDocumentMoniker": "RopeTool.html",
@@ -74,7 +75,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Duolatera.html",
               "DocumentMoniker": "D:\\Software\\Website\\Website\\Duolatera.html",
               "RelativeDocumentMoniker": "Duolatera.html",
@@ -82,8 +83,7 @@
               "RelativeToolTip": "Duolatera.html",
               "ViewState": "AgIAABcAAAAAAAAAAAAQwB4AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-03-28T17:53:08.435Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-28T17:53:08.435Z"
             },
             {
               "$type": "Document",
@@ -99,13 +99,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "index.html",
               "DocumentMoniker": "D:\\Software\\Website\\Website\\index.html",
               "RelativeDocumentMoniker": "index.html",
               "ToolTip": "D:\\Software\\Website\\Website\\index.html",
               "RelativeToolTip": "index.html",
-              "ViewState": "AgIAAP0AAAAAAAAAAAAQwA0BAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAAkBAAAAAAAAAAAQwCMBAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-01-17T16:21:25.11Z",
               "EditorCaption": ""

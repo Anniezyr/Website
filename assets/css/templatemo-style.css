@@ -895,16 +895,40 @@ section.contact-me {
         padding: 0;
     }
 
-        #footer .copyright li {
-            border-left: solid 1px;
-            display: inline-block;
-            line-height: 1em;
-            margin-left: 1em;
-            padding: 0 0 0 1em;
-        }
+    #footer .copyright li {
+        border-left: solid 1px;
+        display: inline-block;
+        line-height: 1em;
+        margin-left: 1em;
+        padding: 0 0 0 1em;
+    }
 
-            #footer .copyright li:first-child {
-                border-left: 0;
-                margin-left: 0;
-                padding: 0;
-            }
+    #footer .copyright li:first-child {
+        border-left: 0;
+        margin-left: 0;
+        padding: 0;
+    }
+
+/* ===== Scroll Fade Animation ===== */
+.fade-item {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+}
+
+    .fade-item.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .fade-item.hide-up {
+        opacity: 0;
+        transform: translateY(-60px);
+    }
+
+    .fade-item.hide-down {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+

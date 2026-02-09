@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Model</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: #05070a;
+            
+        }
+
+        canvas {
+            display:block;
+        }
+    </style>
+</head>
+<body>
+    <script type="module">
+        import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.155.0/build/three.module.js';
+        import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three@0.155.0/examples/jsm/loaders/GLTFLoader.js';
+
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(
+            75,
+            window.innerWidth / window.innerHeight,
+            0.1,
+            1000
+        );
+        camera.position.z = 10;
+
+        const renderer = new THREE.WebGLRenderer({ alpha: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        let particleGeometry;
+        let positionAttribute;
+
+        //load Model
+        const loader = new GLTFLoader();
+        //Get geometry
+        loader.load('./model.glb', (gltf) => {
+            gltf.scene.traverse((child) => {
+                if (child.isMesh) {
+                    createParticlesFromGeometry(child.geometry);
+                }
+            });
+        });
+
+        // Turn geometry to partical
+        function createParticlesFromGeometry(geometry) {
+            const positions = geometry.attributes.position.array;
+
+            // clone 防止影响原模型
+            const positionArray = geometry.attributes.position.array.slice();
+
+            particleGeometry = new THREE.BufferGeometry();
+            particleGeometry.setAttribute(
+                'position',
+                new THREE.BufferAttribute(positionArray, 3)
+            );
+
+            const material = new THREE.PointsMaterial({
+                color: 0xffffff,
+                size: 0.02,
+                sizeAttenuation: true
+            });
+
+            const particles = new THREE.Points(particleGeometry, material);
+            scene.add(particles);
+
+            // Position update
+            positionAttribute = particleGeometry.attributes.position;
+        }
+
+        function animate() {
+            requestAnimationFrame(animate);
+
+            if (positionAttribute) {
+                for (let i = 0; i < positionAttribute.count; i++) {
+                    positionAttribute.array[i * 3 + 1] +=
+                        Math.sin(Date.now() * 0.001 + i) * 0.0005;
+                }
+
+                positionAttribute.needsUpdate = true;
+            }
+            renderer.render(scene, camera);
+        }
+
+        animate();
+
+
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,305 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Particle Sphere</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: #05070a;
+        }
+
+        canvas {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.155.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lil-gui@0.21.0/dist/lil-gui.umd.min.js"></script>
+
+    <script>
+        // ---------- Scene, Camera, Renderer ----------
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
+        camera.position.set(0, 0.1, 4);
+
+        const renderer = new THREE.WebGLRenderer({ antialias: false, powerPreference: "high-performance" });
+
+        const DPR_CAP = window.innerWidth < 768 || navigator.hardwareConcurrency <= 4 ? 1 : 1.25;
+        const isLowEnd =
+            window.innerWidth < 768 ||
+            navigator.hardwareConcurrency <= 4;
+
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, DPR_CAP));
+        document.body.appendChild(renderer.domElement);
+
+        // ---------- Circle Texture ----------
+        function createCircleTexture(size = 64, color = '80,220,255') {
+            const canvas = document.createElement('canvas');
+            canvas.width = canvas.height = size;
+            const ctx = canvas.getContext('2d');
+
+            const gradient = ctx.createRadialGradient(size / 2, size / 2, 0, size / 2, size / 2, size / 2);
+            gradient.addColorStop(0.6, `rgba(${color},1)`);
+            gradient.addColorStop(0.9, `rgba(${color},0.8)`);
+            gradient.addColorStop(1, `rgba(${color},0)`); // alpha=0
+
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, size, size);
+
+            const texture = new THREE.CanvasTexture(canvas);
+            texture.needsUpdate = true;
+            return texture;
+        }
+
+        // ---------- Sphere Particles ----------
+        const particleCount = window.innerWidth < 768 || navigator.hardwareConcurrency <= 4 ? 1200 : 3000;
+        const geometry = new THREE.BufferGeometry();
+        const positions = new Float32Array(particleCount * 3);
+        const basePositions = new Float32Array(particleCount * 3);
+        const delays = new Float32Array(particleCount);
+
+        const radius = 1.5;
+        for (let i = 0; i < particleCount; i++) {
+            delays[i] = Math.random();
+            const u = Math.random();
+            const v = Math.random();
+            const theta = 2 * Math.PI * u;
+            const phi = Math.acos(2 * v - 1);
+            const x = radius * Math.sin(phi) * Math.cos(theta);
+            const y = radius * Math.sin(phi) * Math.sin(theta);
+            const z = radius * Math.cos(phi);
+
+            basePositions[i * 3] = x;
+            basePositions[i * 3 + 1] = y;
+            basePositions[i * 3 + 2] = z;
+
+            positions[i * 3] = (Math.random() - 0.5) * 4;
+            positions[i * 3 + 1] = 3 + Math.random() * 3;
+            positions[i * 3 + 2] = (Math.random() - 0.5) * 4;
+        }
+        geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+
+        const SphereMaterial = new THREE.PointsMaterial({
+            color: 0x9ccfff,
+            size: 0.02,
+            transparent: true,
+            opacity: 0.8,
+            depthWrite: false,
+            sizeAttenuation: true,
+            blending: THREE.AdditiveBlending
+        });
+        const sphere = new THREE.Points(geometry, SphereMaterial);
+        scene.add(sphere);
+
+        // ---------- Flow Particles ----------
+        const flowCount = isLowEnd ? 200 : 400;
+        const flowGeometry = new THREE.BufferGeometry();
+        const flowPositions = new Float32Array(flowCount * 3);
+        for (let i = 0; i < flowCount; i++) {
+            const r = 2.5 + Math.random() * 2;
+            const theta = Math.random() * Math.PI * 2;
+            const phi = Math.acos(2 * Math.random() - 1);
+            flowPositions[i * 3] = r * Math.sin(phi) * Math.cos(theta);
+            flowPositions[i * 3 + 1] = r * Math.sin(phi) * Math.sin(theta);
+            flowPositions[i * 3 + 2] = r * Math.cos(phi);
+        }
+        flowGeometry.setAttribute('position', new THREE.BufferAttribute(flowPositions, 3));
+
+        const FlowMaterial = new THREE.PointsMaterial({
+            color: 0x66ccff,
+            size: 0.03,
+            transparent: true,
+            opacity: 0,
+            sizeAttenuation: true,
+            depthWrite: false
+        });
+        const flowParticles = new THREE.Points(flowGeometry, FlowMaterial);
+        scene.add(flowParticles);
+
+        // ---------- Satellites ----------
+        const satelliteCount = isLowEnd ? 30 : 50;
+        const satelliteGeometry = new THREE.BufferGeometry();
+        const satPositions = new Float32Array(satelliteCount * 3);
+        const satelliteAngles = new Float32Array(satelliteCount);
+        const satelliteRadii = new Float32Array(satelliteCount);
+        const satelliteYOffsets = new Float32Array(satelliteCount);
+        const ringTilt = -0.1;
+        const colors = new Float32Array(satelliteCount * 3);
+
+        for (let i = 0; i < satelliteCount; i++) {
+            satelliteAngles[i] = Math.random() * Math.PI * 2;
+            satelliteRadii[i] = 2.2 + Math.random() * 0.8;
+            satelliteYOffsets[i] = (Math.random() - 0.5) * 0.2;
+            colors[i * 3] = 1;
+            colors[i * 3 + 1] = 1;
+            colors[i * 3 + 2] = 1;
+        }
+
+        satelliteGeometry.setAttribute('position', new THREE.BufferAttribute(satPositions, 3));
+        satelliteGeometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+
+        const satelliteMaterial = new THREE.PointsMaterial({
+            map: createCircleTexture(64, '102,204,255'),
+            transparent: true,
+            alphaTest: 0.01, 
+            vertexColors: true,
+            opacity: 0,
+            size: 0.15,
+            depthWrite: false,
+            sizeAttenuation: true,
+            blending: THREE.AdditiveBlending
+        });
+        const satellitesPoints = new THREE.Points(satelliteGeometry, satelliteMaterial);
+        scene.add(satellitesPoints);
+
+        // ---------- Mouse Control ----------
+        const mouse = { x: 0, y: 0 };
+        const targetRotation = { x: 0, y: 0 };
+        window.addEventListener('mousemove', e => {
+            mouse.x = (e.clientX / window.innerWidth - 0.5) * 2;
+            mouse.y = (e.clientY / window.innerHeight - 0.5) * 2;
+        });
+
+        // ---------- GUI ----------
+        const gui = new lil.GUI();
+        const settings = {
+            mouseControl: true,
+            sphereSize: 1,
+            sphereParticleSize: 0.02,
+            sphereColor: '#9ccfff',
+            sphereSpeed: 0.001,
+            satelliteSize: 0.03,
+            satelliteColor: '#66ccff',
+            satelliteSpeed: 0.1,
+            particleSize: 0.02,
+            particleColor: '#9ccfff',
+            particleSpeed: 0.005
+        };
+        gui.add(settings, 'mouseControl').name('Mouse Control');
+        gui.add(settings, 'sphereSize', 0.5, 2).name('Sphere Size');
+        gui.add(settings, 'sphereParticleSize', 0.01, 0.05).name('Sphere Particle Size').onChange(v => SphereMaterial.size = Math.max(v * 1.5, 0.01));
+        gui.add(settings, 'sphereSpeed', 0.0005, 0.002).name('Sphere AutoSpeed');
+        gui.addColor(settings, 'sphereColor').name('Sphere Color').onChange(v => SphereMaterial.color.set(v));
+        gui.add(settings, 'satelliteSize', 0.05, 0.3).name('Satellite Size').onChange(v => satelliteMaterial.size = v);
+        gui.add(settings, 'satelliteSpeed', 0.01, 1).name('Satellite Speed');
+        gui.addColor(settings, 'satelliteColor').onChange(v => {
+            const rgb = parseInt(v.slice(1), 16);
+            const r = (rgb >> 16) & 255, g = (rgb >> 8) & 255, b = rgb & 255;
+            satelliteMaterial.map = createCircleTexture(64, `${r},${g},${b}`);
+        });
+        gui.add(settings, 'particleSize', 0.03, 0.05).name('Particle Size').onChange(v => FlowMaterial.size = Math.max(v * 1.5, 0.01));
+        gui.add(settings, 'particleSpeed', 0.001, 0.02).name('Particle Speed');
+        gui.addColor(settings, 'particleColor').name('Particle Color').onChange(v => FlowMaterial.color.set(v));
+
+        // ---------- Animation ----------
+        let time = 0;
+        let introProgress = 0;
+        SphereMaterial.opacity = 0;
+        let revealProgress = 0;
+        let introDone = false;
+        let satelliteFrame = 0;
+
+        function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+
+        function animate() {
+            requestAnimationFrame(animate);
+
+            // ---------- Sphere intro fall ----------
+
+            if (!introDone) {
+                introProgress += settings.particleSpeed;
+                const t = easeOutCubic(Math.min(introProgress, 1));
+                for (let i = 0; i < particleCount; i++) {
+                    const i3 = i * 3;
+                    const localT = Math.max(0, t - delays[i] * 0.4);
+                    const strength = localT * 0.08;
+                    positions[i3] += (basePositions[i3] - positions[i3]) * strength;
+                    positions[i3 + 1] += (basePositions[i3 + 1] - positions[i3 + 1]) * strength;
+                    positions[i3 + 2] += (basePositions[i3 + 2] - positions[i3 + 2]) * strength;
+                }
+                geometry.attributes.position.needsUpdate = true;
+                SphereMaterial.opacity = t;
+
+                if (introProgress >= 1) {
+                    introProgress = 1;
+                    introDone = true;
+                    geometry.attributes.position.setUsage(THREE.StaticDrawUsage);
+                }
+            }
+
+            // ---------- Sphere rotation ----------
+            if (introProgress >= 1) {
+                if (settings.mouseControl) {
+                    targetRotation.y = mouse.x * 0.5;
+                    targetRotation.x = mouse.y * 0.5;
+                } else {
+                    //auto rotate
+                    targetRotation.x = 0;
+                    targetRotation.y += settings.sphereSpeed;
+                }
+                sphere.rotation.y += (targetRotation.y - sphere.rotation.y) * 0.05;
+                sphere.rotation.x += (targetRotation.x - sphere.rotation.x) * 0.05;
+
+
+                //breath
+                const scale = settings.sphereSize * (1 + Math.sin(time) * 0.015);
+                sphere.scale.set(scale, scale, scale);
+
+                // show flow and satellites
+                if (revealProgress < 1) {
+                    revealProgress += 0.02;
+                    FlowMaterial.opacity = 0.3 * revealProgress;
+
+                    satelliteMaterial.opacity = 0.6 * revealProgress; // 让卫星渐入
+                }
+
+
+                // ---------- Flow ----------
+                flowParticles.rotation.y += 0.0005;
+                flowParticles.rotation.x += 0.0003;
+
+                // ---------- Satellites ----------
+                if (++satelliteFrame % 2 === 0) {
+                    //update every 2 frame
+                    for (let i = 0; i < satelliteCount; i++) {
+                        satelliteAngles[i] += 0.01 * settings.satelliteSpeed;
+                        const r = satelliteRadii[i];
+                        const yOffset = satelliteYOffsets[i];
+
+                        satPositions[i * 3] = Math.cos(satelliteAngles[i]) * r;
+                        satPositions[i * 3 + 1] = Math.sin(satelliteAngles[i]) * r * ringTilt + yOffset;
+                        satPositions[i * 3 + 2] = Math.sin(satelliteAngles[i]) * r;
+
+                        const z = satPositions[i * 3 + 2];
+                        const brightness = THREE.MathUtils.clamp(THREE.MathUtils.mapLinear(z - camera.position.z, -3, 3, 0.2, 0.9), 0.05, 0.9);
+                        colors[i * 3] = brightness;
+                        colors[i * 3 + 1] = brightness;
+                        colors[i * 3 + 2] = brightness;
+                    }
+                    satelliteGeometry.attributes.position.needsUpdate = true;
+                    satelliteGeometry.attributes.color.needsUpdate = true;
+                }
+            }
+
+            renderer.render(scene, camera);
+            time += 0.01;
+        }
+
+        animate();
+
+        // ---------- Resize ----------
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+    </script>
+</body>
+</html>

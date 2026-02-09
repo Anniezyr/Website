@@ -16,7 +16,7 @@
     </style>
 </head>
 <body>
-<script type="module">
+<script>
 // 引入 Three.js 和 GLTFLoader（ES 模块版本）
     import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.155.0/build/three.module.js';
     import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three@0.155.0/examples/jsm/loaders/GLTFLoader.js';
@@ -46,7 +46,7 @@ let positionAttribute;
 
 // 加载模型
 const loader = new GLTFLoader();
-loader.load('assets/model.glb', (gltf) => {
+    loader.load('./ThreeAssets/model.glb', (gltf) => {
     gltf.scene.traverse((child) => {
         if (child.isMesh) {
             createParticlesFromGeometry(child.geometry);

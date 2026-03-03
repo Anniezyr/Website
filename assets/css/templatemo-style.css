@@ -909,6 +909,145 @@ section.contact-me {
         padding: 0;
     }
 
+/* ===== 完整移动端优化 ===== */
+@media screen and (max-width: 845px) {
+
+    /* ===== Menu ===== */
+    #menu-toggle,
+    #menu-close {
+        display: inline-block;
+    }
+
+    .menu {
+        width: 320px;
+        transform: translateX(-100%) !important;
+        transition: transform 233ms cubic-bezier(0, 0, 0.21, 1);
+        -webkit-overflow-scrolling: touch;
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+        max-height: 100vh !important;
+        top: 0;
+        left: 0;
+    }
+
+        .menu.open {
+            transform: translateX(0) !important;
+        }
+
+        .menu .image {
+            margin-top: 40px;
+        }
+
+            .menu .image img {
+                width: 120px;
+                height: 120px;
+            }
+
+        .menu .author-content {
+            margin: 20px 0 40px 0;
+        }
+
+        .menu .container {
+            padding: 0 15px;
+        }
+
+    /* ===== Section 宽度 ===== */
+    .section {
+        width: 94%;
+        right: 3%;
+        left: 3%;
+        padding-bottom: 20px;
+    }
+
+    /* ===== 左右图片/视频纵向排列 ===== */
+    .left-image-post,
+    .right-image-post {
+        display: flex;
+        flex-direction: column-reverse; /* 文字在上，图片/视频在下 */
+        text-align: center;
+        align-items: center;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-top: 40px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(250, 250, 250, 0.1);
+    }
+
+    .left-image-post .row {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+    }
+
+    .left-image,
+    .right-image,
+    .video-wrapper {
+        margin: 15px auto 0 auto; /* 视频/图片自动居中 */
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    .left-image-post h4,
+    .right-image-post h4,
+    .left-image-post p,
+    .right-image-post p {
+        margin-top: 15px;
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .left-image-post .white-button,
+    .right-image-post .white-button {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+    /* ===== 图片画廊单列 ===== */
+    .image-gallery {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 0 5px;
+    }
+
+        .image-gallery img {
+            width: 100%;
+            margin: 0 auto;
+            display: block;
+        }
+
+    /* ===== Footer 调整 ===== */
+    #footer {
+        padding: 2em 10px;
+        text-align: center;
+        background-size: cover;
+        background-position: center;
+    }
+
+    /* ===== 文字按钮自适应 ===== */
+    .white-button-container {
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+    }
+
+        .white-button-container.two-buttons {
+            flex-direction: column;
+            gap: 5px;
+        }
+
+    .white-button a,
+    button {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+
 /* ===== Scroll Fade Animation ===== */
 .fade-item {
     opacity: 0;
